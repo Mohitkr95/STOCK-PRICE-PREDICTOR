@@ -10,7 +10,7 @@ Broadly, stock market analysis is divided into two parts – Fundamental Analysi
 1. Fundamental Analysis involves analyzing the company’s future profitability on the basis of its current business environment and financial performance.
 2. Technical Analysis, on the other hand, includes reading the charts and using statistical figures to identify the trends in the stock market.
 
-Here I have done technical analysis of TATAGLOBAL share price of National Stock Exchange.
+Here I have done technical analysis of TATAGLOBAL share price of National Stock Exchange where I used Long Short Term Memory Neural Networks to make predictions on stock prices.
 
 # LSTM NEURAL NETWORKS
 
