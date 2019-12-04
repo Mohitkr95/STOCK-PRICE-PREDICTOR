@@ -1,6 +1,6 @@
 # STOCK PRICE PREDICTOR
 
-I have trained the model with the previous its 1-year record cycle of TataGlobal share of NSE and then the model is making predictions on price of the share. For this model, I have used LSTM neural networks.
+I have trained the model with the previous 1-year record cycle of TataGlobal share of NSE and then the model is making predictions on the price of the share. For this model, I have used Long Short Term Memory neural networks.
 
 ![image](https://user-images.githubusercontent.com/37563886/70072949-01029d80-161e-11ea-85f0-a2252771b4a0.png)
 
