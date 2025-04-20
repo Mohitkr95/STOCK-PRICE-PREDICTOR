@@ -1,0 +1,31 @@
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+
+# Logs
+logs/
+*.log
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Local development settings
+.env
+.DS_Store
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+stock_prediction.log

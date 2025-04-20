@@ -1,21 +1,88 @@
-# STOCK PRICE PREDICTOR
+# Stock Price Predictor
 
-I have trained the model with the previous 1-year record cycle of TataGlobal share of NSE and then the model is making predictions on the price of the share. For this model, I have used Long Short Term Memory neural networks.
+A deep learning model using Long Short-Term Memory (LSTM) neural networks to predict stock prices based on historical data. This project demonstrates how to use LSTM networks for time series forecasting in financial markets.
 
-![image](https://user-images.githubusercontent.com/37563886/70072949-01029d80-161e-11ea-85f0-a2252771b4a0.png)
+## Overview
 
-# INTRODUCTION TO STOCK MARKET
+This project trains an LSTM model on one year of historical data from TataGlobal shares on the National Stock Exchange (NSE) to predict future stock prices.
 
-Broadly, stock market analysis is divided into two parts – Fundamental Analysis and Technical Analysis.
-1. Fundamental Analysis involves analyzing the company’s future profitability on the basis of its current business environment and financial performance.
-2. Technical Analysis, on the other hand, includes reading the charts and using statistical figures to identify the trends in the stock market.
+![Stock Price Prediction](output/stock_price_prediction.png)
 
-Here I have done technical analysis of TATAGLOBAL share price of National Stock Exchange where I used Long Short Term Memory Neural Networks to make predictions on stock prices.
+## Introduction to Stock Market Analysis
 
-# LSTM NEURAL NETWORKS
+Stock market analysis is typically divided into two main approaches:
 
-Long short-term memory (LSTM) is an artificial recurrent neural network (RNN) architecture used in the field of deep learning. Unlike standard feedforward neural networks, LSTM has feedback connections. It can not only process single data points (such as images), but also entire sequences of data (such as speech or video). For example, LSTM is applicable to tasks such as unsegmented, connected handwriting recognition, speech recognition and anomaly detection in network traffic or IDS's (intrusion detection systems).
+1. **Fundamental Analysis**: Evaluates a company's future profitability based on its business environment and financial performance.
 
-A common LSTM unit is composed of a cell, an input gate, an output gate and a forget gate. The cell remembers values over arbitrary time intervals and the three gates regulate the flow of information into and out of the cell.
+2. **Technical Analysis**: Uses charts, statistical patterns, and historical price data to identify trends and make predictions.
 
-LSTM networks are well-suited to classifying, processing and making predictions based on time series data, since there can be lags of unknown duration between important events in a time series. LSTMs were developed to deal with the exploding and vanishing gradient problems that can be encountered when training traditional RNNs. Relative insensitivity to gap length is an advantage of LSTM over RNNs, hidden Markov models and other sequence learning methods in numerous applications.
+This project focuses on technical analysis using deep learning to predict stock price movements.
+
+## LSTM Neural Networks
+
+Long Short-Term Memory (LSTM) networks are a specialized type of recurrent neural network (RNN) designed to handle sequential data like time series.
+
+Key characteristics of LSTM networks:
+- Capable of learning long-term dependencies in data
+- Contains specialized gates (input, output, and forget gates) that regulate information flow
+- Effectively addresses the vanishing gradient problem common in traditional RNNs
+- Particularly well-suited for time series data with unknown intervals between important events
+
+![Training Loss](output/training_loss.png)
+
+## Project Structure
+
+```
+├── data/                   # Directory for input data
+│   └── nse-tata-global.csv # Historical stock data
+├── logs/                   # Log files directory
+│   └── stock_prediction.log
+├── models/                 # Saved model files
+│   └── best_model.keras
+├── output/                 # Output visualizations and results
+│   ├── prediction_results.csv
+│   ├── stock_price_prediction.png
+│   └── training_loss.png
+├── utils/                  # Utility modules
+│   ├── __init__.py
+│   └── model_utils.py      # Model utility functions
+├── LICENSE                 # License file
+├── README.md               # This file
+├── requirements.txt        # Project dependencies
+└── stock_predictor.py      # Main execution script
+```
+
+## Project Features
+
+- Data preprocessing and normalization
+- LSTM model architecture optimized for time series prediction
+- Model training with early stopping to prevent overfitting
+- Performance evaluation using RMSE and R² metrics
+- Visualization of predicted vs actual stock prices
+- Modular code structure for better maintainability
+
+## Requirements
+
+```
+matplotlib==3.9.4
+pandas==2.2.3
+scikit-learn==1.6.1
+tensorflow==2.19.0
+```
+
+## How to Run
+
+1. Clone this repository
+2. Install required dependencies: `pip install -r requirements.txt`
+3. Run the prediction model: `python stock_predictor.py`
+
+## Results
+
+The model generates predictions on test data and evaluates performance using standard metrics. Results are saved to the `output` directory:
+- `stock_price_prediction.png`: Visual comparison of actual vs predicted prices
+- `training_loss.png`: Model training loss curve
+- `prediction_results.csv`: Detailed prediction results
+
+## License
+
+This project is licensed under the terms of the included LICENSE file.
