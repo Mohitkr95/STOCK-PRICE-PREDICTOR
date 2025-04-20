@@ -126,6 +126,10 @@ def save_prediction_results(test_data, predictions, output_path):
     """
     Save prediction results to CSV
     """
+    # Ensure predictions is 1-dimensional
+    if hasattr(predictions, 'shape') and len(predictions.shape) > 1:
+        predictions = predictions.flatten()
+        
     results_df = pd.DataFrame({
         'Date': test_data.index,
         'Actual': test_data['Close'],
