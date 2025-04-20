@@ -33,23 +33,23 @@ Key characteristics of LSTM networks:
 ## Project Structure
 
 ```
-├── data/                           # Directory for input data
-│   └── nse-tata-global.csv         # Historical stock data
-├── logs/                           # Log files directory
-│   └── stock_prediction.log
-├── models/                         # Saved model files
-│   └── best_model.keras
-├── output/                         # Output visualizations and results
-│   ├── prediction_results.csv
-│   ├── stock_price_prediction.png
-│   └── training_loss.png
-├── utils/                          # Utility modules
-│   ├── __init__.py
-│   └── model_utils.py              # Model utility functions
-├── LICENSE                         # License file
-├── README.md                       # This file
-├── requirements.txt                # Project dependencies
-└── stock_predictor.py              # Main execution script
+├── data/                           # Contains historical stock price datasets
+│   └── nse-tata-global.csv         # Historical NSE TataGlobal stock data (1 year)
+├── logs/                           # Application logging directory
+│   └── stock_prediction.log        # Detailed execution logs for debugging
+├── models/                         # Trained model storage
+│   └── best_model.keras            # Best performing LSTM model checkpoint
+├── output/                         # Results and visualization files
+│   ├── prediction_results.csv      # Tabular data of actual vs predicted prices
+│   ├── stock_price_prediction.png  # Time series plot comparing predictions with actual prices
+│   └── training_loss.png           # Learning curve visualization showing model convergence
+├── utils/                          # Helper modules and functions
+│   ├── __init__.py                 # Package initialization
+│   └── model_utils.py              # Data preprocessing, model building, and evaluation utilities
+├── LICENSE                         # MIT License file
+├── README.md                       # Project documentation and usage instructions
+├── requirements.txt                # Python dependencies with version specifications
+└── stock_predictor.py              # Main application entry point with execution logic
 ```
 
 ## Project Features
