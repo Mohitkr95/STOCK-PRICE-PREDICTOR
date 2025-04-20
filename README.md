@@ -33,23 +33,23 @@ Key characteristics of LSTM networks:
 ## Project Structure
 
 ```
-├── data/                   # Directory for input data
-│   └── nse-tata-global.csv # Historical stock data
-├── logs/                   # Log files directory
+├── data/                           # Directory for input data
+│   └── nse-tata-global.csv         # Historical stock data
+├── logs/                           # Log files directory
 │   └── stock_prediction.log
-├── models/                 # Saved model files
+├── models/                         # Saved model files
 │   └── best_model.keras
-├── output/                 # Output visualizations and results
+├── output/                         # Output visualizations and results
 │   ├── prediction_results.csv
 │   ├── stock_price_prediction.png
 │   └── training_loss.png
-├── utils/                  # Utility modules
+├── utils/                          # Utility modules
 │   ├── __init__.py
-│   └── model_utils.py      # Model utility functions
-├── LICENSE                 # License file
-├── README.md               # This file
-├── requirements.txt        # Project dependencies
-└── stock_predictor.py      # Main execution script
+│   └── model_utils.py              # Model utility functions
+├── LICENSE                         # License file
+├── README.md                       # This file
+├── requirements.txt                # Project dependencies
+└── stock_predictor.py              # Main execution script
 ```
 
 ## Project Features
